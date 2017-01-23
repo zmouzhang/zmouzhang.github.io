@@ -103,26 +103,26 @@
             }
         }
 </code></pre><h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2,选择排序"></a>2,选择排序</h2><p>选择排序首先得找到所有数中的最小数，然后遍历余下的数与最小数比较，然后根据结果来确定每一个数字存放的位置。（可以是从小到大，也可以是从大到小）。</p>
-<pre><code>public void ChooseSort(int arr[])
+<pre><code>    public void ChooseSort(int arr[])
+      {
+         int temp=0;
+          for(int j=0;j&lt;arr.length-1;j++)
+          {
+           int min=arr[j];
+           int minIndex=j;
+           for(int k=j+1;k&lt;arr.length;k++)
             {
-                int temp=0;
-                for(int j=0;j&lt;arr.length-1;j++)
-                {
-                    int min=arr[j];
-                    int minIndex=j;
-                    for(int k=j+1;k&lt;arr.length;k++)
-                    {
-                        if(min&gt;arr[k])
-                        {
-                            min=arr[k];
-                            minIndex=k;
-                        }
-                    }
-                    temp=arr[j];
-                    arr[j]=arr[minIndex];
-                    arr[minIndex]=temp;
-                }
+            if(min&gt;arr[k])
+           {
+            min=arr[k];
+            minIndex=k;
             }
+           }
+           temp=arr[j];
+            arr[j]=arr[minIndex];
+            arr[minIndex]=temp;
+           }
+}
 </code></pre><h2 id="3-快速排序"><a href="#3-快速排序" class="headerlink" title="3,快速排序"></a>3,快速排序</h2><p>快速排序是我们经常使用的排序方法。它是通过空间作为代价，换取快速的一种排序方法。</p>
 <ul>
 <li><p>1．i =L; j = R; 将基准数挖出形成第一个坑a[i]。</p>
@@ -136,55 +136,55 @@
 </ul>
 <p>其中，i，j分别是指向数组的开头和尾。</p>
 <pre><code>void quick_sort(int s[], int l, int r)  
-{  if (l &lt; r)  
-    {  
-        //Swap(s[l], s[(l + r) / 2]); 
-        int i = l, j = r, x = s[l];  
-        while (i &lt; j)  
-        {  
-            while(i &lt; j &amp;&amp; s[j] &gt;= x) // 从右向左找第一个小于x的数  
-            j--;    
-            if(i &lt; j)   
-                s[i++] = s[j];  
-                while(i &lt; j &amp;&amp; s[i] &lt; x) // 从左向右找第一个大于等于x的数  
-                i++;    
-            if(i &lt; j)   
-                s[j--] = s[i];  
-        }  
-        s[i] = x;  
-        quick_sort(s, l, i - 1); // 递归调用   
-        quick_sort(s, i + 1, r);  
-    }  
-  } 
+    {  if (l &lt; r)  
+         {  
+            //Swap(s[l], s[(l + r) / 2]); 
+            int i = l, j = r, x = s[l];  
+             while (i &lt; j)  
+              {  
+                while(i &lt; j &amp;&amp; s[j] &gt;= x) // 从右向左找第一个小于x的数  
+                 j--;    
+                  if(i &lt; j)   
+                   s[i++] = s[j];  
+                     while(i &lt; j &amp;&amp; s[i] &lt; x) // 从左向右找第一个大于等于x的数  
+                   i++;    
+                  if(i &lt; j)   
+                   s[j--] = s[i];  
+                }  
+               s[i] = x;  
+              quick_sort(s, l, i - 1); // 递归调用   
+              quick_sort(s, i + 1, r);  
+            }  
+    } 
 </code></pre></blockquote>
 <h1 id="二，二分查找"><a href="#二，二分查找" class="headerlink" title="二，二分查找"></a>二，二分查找</h1><blockquote>
 <p>二分查找：选取数组中的中间值，作为第一次比较数。如果要查找的数小于比较数，则从第一个数到比较数的前一位的数所在区间来查找。如果大，则从比较数的后一位数到数组末尾所在区间来查找。依次类推，直到找到位置。</p>
 <pre><code>public void BinaryFind(int leftIndex,int rightIndex,int val,int arr [])
+     {
+    int midIndex=(rightIndex+leftIndex)/2;
+           int midVal=arr[midIndex];
+           if(rightIndex&gt;=leftIndex)
             {
-                int midIndex=(rightIndex+leftIndex)/2;
-                int midVal=arr[midIndex];
-                if(rightIndex&gt;=leftIndex)
-                {
-                    if(midVal&gt;val)
-                    {
-                        BinaryFind(leftIndex, midIndex-1, val, arr);
-                    }
-                    else if(midVal&lt;val)
-                    {
-                        BinaryFind(midIndex+1, rightIndex, val, arr);
-                    }
-                    else if(midVal==val)
-                    {
-                        System.out.println(&quot;找到所需要值得下标：&quot;+midIndex);
-                    }
-                }
-            }
+            if(midVal&gt;val)
+            {
+             BinaryFind(leftIndex, midIndex-1, val, arr);
+              }
+           else if(midVal&lt;val)
+              {
+            BinaryFind(midIndex+1, rightIndex, val, arr);
+               }
+              else if(midVal==val)
+               {
+                System.out.println(&quot;找到所需要值得下标：&quot;+midIndex);
+               }
+              }
+    }
 </code></pre></blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zmouzhang.github.io/2017/01/23/new-page.html/" data-id="ciy9qohrp000128riotf2j4r9" class="article-share-link">Share</a>
+      <a data-url="http://zmouzhang.github.io/2017/01/23/new-page.html/" data-id="ciy9qxauh000128rilupan2oe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/“排序”-“查找”/">“排序” “查找”</a></li></ul>
@@ -237,7 +237,7 @@ final float pai=3.1415926f;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zmouzhang.github.io/2017/01/22/java/" data-id="ciy9qohrj000028rihn8xcg47" class="article-share-link">Share</a>
+      <a data-url="http://zmouzhang.github.io/2017/01/22/java/" data-id="ciy9qxaux000228riucchfybt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -282,7 +282,7 @@ final float pai=3.1415926f;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zmouzhang.github.io/2016/12/28/hello-world/" data-id="ciy9qohrr000228riwmk17kdc" class="article-share-link">Share</a>
+      <a data-url="http://zmouzhang.github.io/2016/12/28/hello-world/" data-id="ciy9qxau1000028ri8otx7s5k" class="article-share-link">Share</a>
       
       
     </footer>
