@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zmouzhang.github.io"></form>
@@ -87,41 +87,41 @@
 <p>在本文中，列出三种排序方法： <strong>冒泡</strong> 、<strong>选择</strong> 、<strong>快速</strong>三种排序方法。</p>
 <h2 id="1，冒泡排序"><a href="#1，冒泡排序" class="headerlink" title="1，冒泡排序"></a>1，冒泡排序</h2><p>冒泡排序就是通过一层层的遍历，然后比较两个数之间的大小，从而选择合适位置进行插入，从而使数组变成有序数组。</p>
 <pre><code>public void sort(int arr [])
- {
-     int temp=0;
-     for(int i=0;i&lt;arr.length-1;i++)
-     {
-         for(int j=0;j&lt;arr.length-1-i;j++)
-         {
-             if(arr[j]&gt;arr[j+1])
-             {
-                 temp=arr[j];
-                 arr[j]=arr[j+1];
-                 arr[j+1]=temp;
-             }
-         }
-     }
- }
-</code></pre><h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2,选择排序"></a>2,选择排序</h2><p>选择排序首先得找到所有数中的最小数，然后遍历余下的数与最小数比较，然后根据结果来确定每一个数字存放的位置。（可以是从小到大，也可以是从大到小）。</p>
-<pre><code>public void ChooseSort(int arr[])
-    {
-        int temp=0;
-        for(int j=0;j&lt;arr.length-1;j++)
         {
-            int min=arr[j];
-            int minIndex=j;
-            for(int k=j+1;k&lt;arr.length;k++)
+            int temp=0;
+            for(int i=0;i&lt;arr.length-1;i++)
             {
-                if(min&gt;arr[k])
+                for(int j=0;j&lt;arr.length-1-i;j++)
                 {
-                    min=arr[k];
-                    minIndex=k;
+                    if(arr[j]&gt;arr[j+1])
+                    {
+                        temp=arr[j];
+                        arr[j]=arr[j+1];
+                        arr[j+1]=temp;
+                    }
                 }
             }
-            temp=arr[j];
-            arr[j]=arr[minIndex];
-            arr[minIndex]=temp;
         }
+</code></pre><h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2,选择排序"></a>2,选择排序</h2><p>选择排序首先得找到所有数中的最小数，然后遍历余下的数与最小数比较，然后根据结果来确定每一个数字存放的位置。（可以是从小到大，也可以是从大到小）。</p>
+<pre><code>public void ChooseSort(int arr[])
+            {
+                int temp=0;
+                for(int j=0;j&lt;arr.length-1;j++)
+                {
+                    int min=arr[j];
+                    int minIndex=j;
+                    for(int k=j+1;k&lt;arr.length;k++)
+                    {
+                        if(min&gt;arr[k])
+                        {
+                            min=arr[k];
+                            minIndex=k;
+                        }
+                    }
+                    temp=arr[j];
+                    arr[j]=arr[minIndex];
+                    arr[minIndex]=temp;
+                }
 </code></pre></blockquote>
 <pre><code>}
 </code></pre><blockquote>
@@ -187,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zmouzhang.github.io/2017/01/23/new-page.html/" data-id="ciy9qe7m600001kriivl0zei4" class="article-share-link">Partager</a>
+      <a data-url="http://zmouzhang.github.io/2017/01/23/new-page.html/" data-id="ciy9qjb6y0002uori73bahjcx" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/“排序”-“查找”/">“排序” “查找”</a></li></ul>
@@ -240,7 +240,7 @@ final float pai=3.1415926f;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zmouzhang.github.io/2017/01/22/java/" data-id="ciy9qe7mm00031kriocw69ewl" class="article-share-link">Partager</a>
+      <a data-url="http://zmouzhang.github.io/2017/01/22/java/" data-id="ciy9qjb5u0000uorig3umge1e" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -285,7 +285,7 @@ final float pai=3.1415926f;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zmouzhang.github.io/2016/12/28/hello-world/" data-id="ciy9qe7mm00041kricpzfodt2" class="article-share-link">Partager</a>
+      <a data-url="http://zmouzhang.github.io/2016/12/28/hello-world/" data-id="ciy9qjb620001uorisc41gkqb" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -305,7 +305,7 @@ final float pai=3.1415926f;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/“排序”-“查找”/">“排序” “查找”</a></li></ul>
     </div>
@@ -315,7 +315,7 @@ final float pai=3.1415926f;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/“排序”-“查找”/" style="font-size: 10px;">“排序” “查找”</a>
     </div>
@@ -324,7 +324,7 @@ final float pai=3.1415926f;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
     </div>
@@ -334,7 +334,7 @@ final float pai=3.1415926f;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
@@ -363,7 +363,7 @@ final float pai=3.1415926f;
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
